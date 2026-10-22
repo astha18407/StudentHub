@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudentHub</title>
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+<div class="notification-banner" id="notificationBanner">
+<p>Welcome to StudentHub! Explore events, faculty and campus activities.</p>
+<button id="closeNotification" aria-label="Close notification">Close</button>
+</div>
+
+<header class="site-header">
+<div class="header-container">
+<a href="index.html" class="logo">StudentHub</a>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">Menu</button>
+
+<nav class="main-nav" id="mainNav" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="events.html">Events</a>
+<a href="faculty.html">Faculty</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="header-buttons">
+<button class="theme-btn" id="themeToggle">Theme</button>
+<a href="login.html" class="login-btn">Login</a>
+<a href="register.html" class="register-btn">Register</a>
+</div>
+
+</div>
+</header>
+
+<main>
+
+<section class="home-hero">
+<div class="hero-content">
+<p class="section-label">WELCOME TO STUDENTHUB</p>
+<h1>Your campus.<br>Your community.<br>Your hub.</h1>
+<p>Everything you need for student life, all in one place. Discover events, connect with faculty, manage your profile and stay updated with campus activities.</p>
+
+<div class="hero-buttons">
+<a href="register.html" class="primary-btn">Get Started</a>
+<button class="secondary-btn" id="openModal">Learn More</button>
+</div>
+</div>
+</section>
+
+<section class="weather-section">
+
+<p class="section-label">WEATHER</p>
+
+<h2>Check City Weather</h2>
+
+<div class="weather-search">
+
+<input type="text" id="cityInput" placeholder="Enter city name">
+
+<button id="weatherButton">Search</button>
+
+</div>
+
+<div id="weather">
+<p>Enter a city to check the weather.</p>
+</div>
+
+</section>
+<section class="content-section">
+
+<div class="section-heading">
+<p class="section-label">WHY STUDENTHUB</p>
+<h2>Everything students need</h2>
+<p>A simple and organized platform designed to make campus life easier.</p>
+</div>
+
+<div class="feature-grid">
+
+<article class="feature-card">
+<span>01</span>
+<h3>Campus Events</h3>
+<p>Discover hackathons, workshops, sports meets and other exciting campus activities.</p>
+<a href="events.html">Explore Events</a>
+</article>
+
+<article class="feature-card">
+<span>02</span>
+<h3>Faculty Directory</h3>
+<p>Find faculty members and department information whenever you need academic help.</p>
+<a href="faculty.html">Meet Faculty</a>
+</article>
+
+<article class="feature-card">
+<span>03</span>
+<h3>Student Dashboard</h3>
+<p>Keep track of your events, notifications, profile and important student information.</p>
+<a href="login.html">Open Dashboard</a>
+</article>
+
+<article class="feature-card">
+<span>04</span>
+<h3>Student Support</h3>
+<p>Get answers to common questions, contact the team and share your valuable feedback.</p>
+<a href="contact.html">Get Support</a>
+</article>
+
+</div>
+</section>
+
+
+<section class="stats-section">
+
+<div>
+<strong>250+</strong>
+<span>Students</span>
+</div>
+
+<div>
+<strong>30+</strong>
+<span>Faculty Members</span>
+</div>
+
+<div>
+<strong>12+</strong>
+<span>Campus Events</span>
+</div>
+
+<div>
+<strong>100%</strong>
+<span>Student Focused</span>
+</div>
+
+</section>
+
+
+<section class="content-section">
+
+<div class="section-heading">
+<p class="section-label">UPCOMING</p>
+<h2>What's happening on campus?</h2>
+<p>Don't miss the latest events and opportunities.</p>
+</div>
+
+<div class="home-slider">
+
+<div class="slider-item active">
+
+<article class="full-event-card">
+
+<div class="event-date-large">
+<strong>20</strong>
+<span>SEP 2026</span>
+</div>
+
+<div class="event-content">
+<span class="event-category">TECHNICAL</span>
+<h2>Hackathon 2026</h2>
+<p>Join students and build innovative solutions in the annual campus hackathon.</p>
+<a href="events.html" class="primary-btn">View Event</a>
+</div>
+
+</article>
+
+</div>
+
+
+<div class="slider-item">
+
+<article class="full-event-card">
+
+<div class="event-date-large">
+<strong>15</strong>
+<span>OCT 2026</span>
+</div>
+
+<div class="event-content">
+<span class="event-category">WORKSHOP</span>
+<h2>AI Workshop</h2>
+<p>Learn the fundamentals of artificial intelligence through practical activities.</p>
+<a href="events.html" class="primary-btn">View Event</a>
+</div>
+
+</article>
+
+</div>
+
+
+<div class="slider-controls">
+<button id="prevSlide">Previous</button>
+<button id="nextSlide">Next</button>
+</div>
+
+</div>
+</section>
+
+
+<section class="help-section">
+
+<div>
+<p class="section-label">READY TO GET STARTED?</p>
+<h2>Become part of StudentHub.</h2>
+<p>Create your student account and explore everything your campus has to offer.</p>
+</div>
+
+<div class="help-buttons">
+<a href="register.html" class="primary-btn">Create Account</a>
+</div>
+
+</section>
+
+</main>
+
+
+<div class="modal" id="welcomeModal">
+
+<div class="modal-content">
+
+<button class="modal-close" id="closeModal" aria-label="Close popup">Close</button>
+
+<p class="section-label">ABOUT STUDENTHUB</p>
+
+<h2>Your complete student portal</h2>
+
+<p>StudentHub helps students access campus events, faculty information, student services and important updates from one organized platform.</p>
+
+<a href="about.html" class="primary-btn">Explore StudentHub</a>
+
+</div>
+
+</div>
+
+
+<footer class="site-footer">
+
+<div class="footer-container">
+
+<div>
+<h2>StudentHub</h2>
+<p>Your campus. Your community. Your hub.</p>
+</div>
+
+<div>
+<h3>Explore</h3>
+<a href="about.html">About</a>
+<a href="events.html">Events</a>
+<a href="faculty.html">Faculty</a>
+</div>
+
+<div>
+<h3>Support</h3>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="feedback.html">Feedback</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>Copyright 2026 StudentHub. All Rights Reserved.</p>
+</div>
+
+</footer>
+
+
+<script src="JS/script.js"></script>
+<script src="JS/weather.js"></script>
+
+</body>
+</html>

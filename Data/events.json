@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "title": "Hackathon 2026",
+        "category": "Technical",
+        "date": "20 Sep 2026",
+        "venue": "Depstar Seminar Hall",
+        "description": "Coding competition for students."
+    },
+
+    {
+        "id": 2,
+        "title": "Sports Meet",
+        "category": "Sports",
+        "date": "05 Oct 2026",
+        "venue": "Sports Complex",
+        "description": "Annual sports event for students."
+    },
+
+    {
+        "id": 3,
+        "title": "AI Workshop",
+        "category": "Workshop",
+        "date": "15 Oct 2026",
+        "venue": "Computer Lab",
+        "description": "Workshop on Artificial Intelligence."
+    },
+
+    {
+        "id": 4,
+        "title": "Cultural Day",
+        "category": "Cultural",
+        "date": "22 Oct 2026",
+        "venue": "Main Auditorium",
+        "description": "Cultural activities and performances."
+    },
+
+    {
+        "id": 5,
+        "title": "Career Seminar",
+        "category": "Academic",
+        "date": "08 Nov 2026",
+        "venue": "Seminar Hall",
+        "description": "Career guidance seminar for students."
+    }
+]

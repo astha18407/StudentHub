@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StudentHub - AJAX Event CRUD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f5f9;
+            padding: 25px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+        input, select, textarea, button {
+            padding: 10px;
+            margin: 6px 0;
+            box-sizing: border-box;
+            max-width: 100%;
+        }
+        input, select, textarea { width: 100%; }
+        button {
+            background: #2459a9;
+            color: white;
+            border: 0;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .delete { background: #c62828; }
+        .cancel { background: #666; }
+        .message { padding: 12px; background: #e4f7e8; margin: 12px 0; }
+        .error { padding: 12px; background: #ffe5e5; margin: 12px 0; }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background: #eaf0fa; }
+        @media(max-width: 650px) {
+            .form-grid { grid-template-columns: 1fr; }
+            table { display: block; overflow-x: auto; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>StudentHub Event Management</h1>
+
+    <p><a href="admin_dashboard.php">Back to Admin Dashboard</a></p>
+
+    <div id="message" role="status" aria-live="polite"></div>
+
+    <h2 id="formTitle">Add Event</h2>
+
+    <form id="eventForm">
+        <input type="hidden" id="event_id">
+
+        <div class="form-grid">
+            <div>
+                <label for="title">Event Title</label>
+                <input id="title" maxlength="150" required>
+            </div>
+
+            <div>
+                <label for="event_date">Event Date</label>
+                <input type="date" id="event_date" required>
+            </div>
+
+            <div>
+                <label for="venue">Venue</label>
+                <input id="venue" maxlength="150" required>
+            </div>
+
+            <div>
+                <label for="category">Category</label>
+                <input id="category" maxlength="100" value="General" required>
+            </div>
+
+            <div>
+                <label for="status">Status</label>
+                <select id="status">
+                    <option value="Open">Open</option>
+                    <option value="Closed">Closed</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="description">Description</label>
+                <textarea id="description" rows="3"></textarea>
+            </div>
+        </div>
+
+        <button type="submit" id="saveButton">Add Event</button>
+        <button type="button" id="cancelButton" class="cancel" hidden>
+            Cancel Edit
+        </button>
+    </form>
+
+    <hr>
+
+    <h2>All Events</h2>
+
+    <label for="search">Search events</label>
+    <input type="search" id="search" placeholder="Search by title, venue or category">
+
+    <button type="button" id="searchButton">Search</button>
+    <button type="button" id="resetButton" class="cancel">Reset</button>
+
+    <p id="loading" hidden>Loading events...</p>
+
+    <div style="overflow-x:auto">
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Venue</th>
+                <th>Category</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody id="eventTable">
+                <tr><td colspan="7">Loading events...</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="event_api.js"></script>
+</body>
+</html>

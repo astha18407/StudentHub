@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Register | StudentHub</title>
+
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+<div class="header-container">
+
+<a href="index.html" class="logo">StudentHub</a>
+
+<nav class="main-nav" id="mainNav" aria-label="Main navigation">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="events.html">Events</a>
+<a href="faculty.html">Faculty</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<div class="header-buttons">
+
+<button type="button" id="themeToggle">Theme</button>
+
+<a href="login.html" class="login-btn">Login</a>
+
+<a href="register.html" class="register-btn">Register</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<main>
+
+<section class="form-page">
+
+<div class="form-container">
+
+<p class="section-label">JOIN STUDENTHUB</p>
+
+<h1>Create your student account</h1>
+
+<p class="form-intro">
+Register to access campus events, student services and your personal dashboard.
+</p>
+<form
+    class="student-form"
+    id="registerForm"
+    action="register.php"
+    method="POST"
+    novalidate
+>
+
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label for="fname">First Name</label>
+
+<input
+    type="text"
+    id="fname"
+    name="fname"
+>
+
+<small
+    class="error-message"
+    id="fnameError">
+</small>
+
+</div>
+
+
+<div class="form-group">
+
+<label for="lname">Last Name</label>
+
+<input
+    type="text"
+    id="lname"
+    name="lname"
+>
+
+<small
+    class="error-message"
+    id="lnameError">
+</small>
+
+</div>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label for="email">Email Address</label>
+
+<input
+    type="email"
+    id="email"
+    name="email"
+>
+
+<small
+    class="error-message"
+    id="emailError">
+</small>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label for="mobile">Mobile Number</label>
+
+<input
+    type="tel"
+    id="mobile"
+    name="mobile"
+>
+
+<small
+    class="error-message"
+    id="mobileError">
+</small>
+
+</div>
+
+
+
+<div class="form-row">
+
+
+<div class="form-group">
+
+<label for="course">Course</label>
+
+<select
+    id="course"
+    name="course"
+>
+
+<option value="">Select Course</option>
+
+<option value="Computer Engineering">
+Computer Engineering
+</option>
+
+<option value="Computer Science">
+Computer Science
+</option>
+
+<option value="Information Technology">
+Information Technology
+</option>
+
+<option value="Electronics Engineering">
+Electronics Engineering
+</option>
+
+</select>
+
+<small
+    class="error-message"
+    id="courseError">
+</small>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label for="year">Year</label>
+
+<select
+    id="year"
+    name="year"
+>
+
+<option value="">Select Year</option>
+
+<option value="1">Year 1</option>
+
+<option value="2">Year 2</option>
+
+<option value="3">Year 3</option>
+
+<option value="4">Year 4</option>
+
+</select>
+
+<small
+    class="error-message"
+    id="yearError">
+</small>
+
+</div>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>Gender</label>
+
+<div class="radio-group">
+
+<label>
+<input
+    type="radio"
+    name="gender"
+    value="Male"
+>
+Male
+</label>
+
+
+<label>
+<input
+    type="radio"
+    name="gender"
+    value="Female"
+>
+Female
+</label>
+
+
+<label>
+<input
+    type="radio"
+    name="gender"
+    value="Other"
+>
+Other
+</label>
+
+</div>
+
+<small
+    class="error-message"
+    id="genderError">
+</small>
+
+</div>
+
+
+
+<div class="form-row">
+
+
+<div class="form-group">
+
+<label for="password">Password</label>
+
+<input
+    type="password"
+    id="password"
+    name="password"
+>
+
+<small id="passwordStrength"></small>
+
+<small
+    class="error-message"
+    id="passwordError">
+</small>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label for="confirm">Confirm Password</label>
+
+<input
+    type="password"
+    id="confirm"
+    name="confirm"
+>
+
+<small
+    class="error-message"
+    id="confirmError">
+</small>
+
+</div>
+
+</div>
+
+
+
+<div class="form-group terms-group">
+
+<label>
+
+<input
+    type="checkbox"
+    id="terms"
+    name="terms"
+    value="yes"
+>
+
+I accept the Terms and Conditions
+
+</label>
+
+<small
+    class="error-message"
+    id="termsError">
+</small>
+
+</div>
+
+
+
+<div class="form-actions">
+
+<button
+    type="submit"
+    class="primary-btn"
+>
+Create Account
+</button>
+
+<button
+    type="reset"
+    class="secondary-btn"
+>
+Reset
+</button>
+
+</div>
+
+
+
+<p class="form-footer">
+
+Already have an account?
+
+<a href="login.html">
+Login here
+</a>
+
+</p>
+
+
+<p id="registerMessage"></p>
+
+</form>
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<footer class="site-footer">
+
+<div class="footer-container">
+
+
+<div>
+
+<h2>StudentHub</h2>
+
+<p>
+Your campus. Your community. Your hub.
+</p>
+
+</div>
+
+
+
+<div>
+
+<h3>Explore</h3>
+
+<a href="about.html">About</a>
+
+<a href="events.html">Events</a>
+
+<a href="faculty.html">Faculty</a>
+
+</div>
+
+
+
+<div>
+
+<h3>Support</h3>
+
+<a href="faq.html">FAQ</a>
+
+<a href="contact.html">Contact</a>
+
+<a href="feedback.html">Feedback</a>
+
+</div>
+
+
+</div>
+
+
+
+<div class="footer-bottom">
+
+<p>
+Copyright 2026 StudentHub. All Rights Reserved.
+</p>
+</div>
+</footer>
+<script src="JS/script.js"></script>
+</body>
+</html>

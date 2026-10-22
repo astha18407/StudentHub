@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudentHub - Events</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a href="index.html" class="logo">
+                StudentHub
+            </a>
+
+            <nav class="main-nav">
+
+                <a href="index.html">Home</a>
+
+                <a href="about.html">About</a>
+
+                <a href="events.html" class="active">Events</a>
+
+                <a href="faculty.html">Faculty</a>
+
+                <a href="faq.html">FAQ</a>
+
+                <a href="contact.html">Contact</a>
+
+            </nav>
+
+            <div class="header-buttons">
+
+                <button class="theme-toggle" id="themeToggle">
+                    Theme
+                </button>
+
+                <a href="login.html" class="btn btn-secondary">
+                    Login
+                </a>
+
+                <a href="register.html" class="btn btn-primary">
+                    Register
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- Page Heading -->
+
+    <section class="page-hero">
+
+        <p class="section-label">
+            STUDENTHUB EVENTS
+        </p>
+
+        <h1>
+            College Events
+        </h1>
+
+        <p>
+            Find upcoming events at StudentHub.
+        </p>
+
+    </section>
+
+
+    <!-- Events Section -->
+
+    <section class="events-section">
+
+        <!-- Search and Filter -->
+
+        <div class="event-controls">
+
+            <input
+                type="text"
+                id="eventSearch"
+                placeholder="Search event..."
+            >
+
+            <select id="eventCategory">
+
+                <option value="All">
+                    All Categories
+                </option>
+
+                <option value="Technical">
+                    Technical
+                </option>
+
+                <option value="Sports">
+                    Sports
+                </option>
+
+                <option value="Workshop">
+                    Workshop
+                </option>
+
+                <option value="Cultural">
+                    Cultural
+                </option>
+
+                <option value="Academic">
+                    Academic
+                </option>
+
+            </select>
+
+
+            <!-- Sorting -->
+
+            <select id="eventSort">
+
+                <option value="default">
+                    Sort By
+                </option>
+
+                <option value="title">
+                    Title
+                </option>
+
+                <option value="date">
+                    Date
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- Event Status -->
+
+        <p id="eventStatus">
+            Loading events...
+        </p>
+
+
+        <!-- Events -->
+
+        <div id="eventList"></div>
+
+
+        <!-- Pagination -->
+
+        <div id="pagination" class="pagination"></div>
+
+    </section>
+
+
+    <!-- JavaScript -->
+
+    <script src="JS/events.js"></script>
+
+</body>
+
+</html>
